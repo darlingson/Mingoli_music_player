@@ -1,7 +1,12 @@
 package com.codeshinobi.mingoli_music_player
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountBox
+import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.Build
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.List
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.ui.graphics.vector.ImageVector
 
 data class BottomNavigationItem(
@@ -18,12 +23,12 @@ data class BottomNavigationItem(
             ),
             BottomNavigationItem(
                 label = "Library",
-                icon = Icons.Filled.Home,
+                icon = Icons.Default.List,
                 route = Screens.Library.route
             ),
             BottomNavigationItem(
                 label = "Settings",
-                icon = Icons.Filled.Home,
+                icon = Icons.Filled.Settings,
                 route = Screens.Settings.route
             )
         )
