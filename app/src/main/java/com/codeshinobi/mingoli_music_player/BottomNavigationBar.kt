@@ -13,6 +13,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.codeshinobi.mingoli_music_player.NavScreens.NavHomeScreen
 import com.codeshinobi.mingoli_music_player.NavScreens.NavLibraryScreen
+import com.codeshinobi.mingoli_music_player.NavScreens.NavSettingsScreen
 
 @Composable
 fun BottomNavigationBar() {
@@ -64,7 +65,7 @@ fun BottomNavigationBar() {
                 )
             }
             composable(Screens.Settings.route) {
-                NavLibraryScreen(
+                NavSettingsScreen(
                     navController
                 )
             }
