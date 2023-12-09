@@ -7,7 +7,9 @@ import android.net.Uri
 import android.os.Build
 import android.provider.MediaStore
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -104,8 +106,20 @@ fun MusicCard(music: MusicCardModel) {
             .padding(16.dp)
             .fillMaxWidth()
     ) {
-        Text(text = music.songTitle, fontSize = 20.sp, modifier = Modifier.padding(top = 16.dp))
+        Row(
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(
+                text = music.songTitle,
+                fontSize = 20.sp,
+                modifier = Modifier.weight(4f) // takes up 80% width
+            )
+            Text(
+                text = music.duration,
+                fontSize = 14.sp,
+                modifier = Modifier.weight(1f) // takes up 20% width
+            )
+        }
         Text(text = music.artist, fontSize = 16.sp, modifier = Modifier.padding(top = 8.dp))
-        Text(text = music.duration, fontSize = 14.sp, modifier = Modifier.padding(top = 4.dp))
     }
 }
