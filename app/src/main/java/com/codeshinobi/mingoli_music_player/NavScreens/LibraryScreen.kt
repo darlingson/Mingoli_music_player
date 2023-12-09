@@ -101,25 +101,28 @@ fun MusicList() {
 }
 @Composable
 fun MusicCard(music: MusicCardModel) {
-    Column(
+    Row(
         modifier = Modifier
             .padding(16.dp)
             .fillMaxWidth()
     ) {
-        Row(
-            modifier = Modifier.fillMaxWidth()
+        Column(
+            modifier = Modifier.weight(4f) // takes up 80% width
         ) {
             Text(
                 text = music.songTitle,
-                fontSize = 20.sp,
-                modifier = Modifier.weight(4f) // takes up 80% width
+                fontSize = 20.sp
             )
             Text(
-                text = music.duration,
-                fontSize = 14.sp,
-                modifier = Modifier.weight(1f) // takes up 20% width
+                text = music.artist,
+                fontSize = 16.sp,
+                modifier = Modifier.padding(top = 8.dp)
             )
         }
-        Text(text = music.artist, fontSize = 16.sp, modifier = Modifier.padding(top = 8.dp))
+        Text(
+            text = music.duration,
+            fontSize = 14.sp,
+            modifier = Modifier.weight(1f) // takes up 20% width
+        )
     }
 }
