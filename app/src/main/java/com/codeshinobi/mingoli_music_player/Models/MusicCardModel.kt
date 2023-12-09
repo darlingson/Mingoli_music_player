@@ -39,5 +39,5 @@ fun convertMili(milliSeconds: Int): String {
     val hours = TimeUnit.MILLISECONDS.toHours(milliSeconds.toLong())
     val minutes = TimeUnit.MILLISECONDS.toMinutes(milliSeconds.toLong()) - TimeUnit.HOURS.toMinutes(hours)
     val seconds = TimeUnit.MILLISECONDS.toSeconds(milliSeconds.toLong()) - TimeUnit.MINUTES.toSeconds(minutes)
-    return String.format("%02d:%02d:%02d", hours, minutes, seconds)
+    return String.format("%02d:%02d", minutes, seconds)
 }
