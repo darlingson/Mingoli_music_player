@@ -19,6 +19,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -52,7 +54,8 @@ fun HomeScreenSetUp(){
 fun MostPlayedSongs(){
     Text(
         text = "Most Played Songs",
-        fontSize = 20.sp
+        fontSize = 20.sp,
+        fontWeight = FontWeight.Bold
         )
     Row(
         modifier = Modifier
@@ -95,7 +98,8 @@ fun SongCard(title:String,artist:String){
 fun MostPlayedGenres(){
     Text(
         text = "Most Played Genres",
-        fontSize = 20.sp
+        fontSize = 20.sp,
+        fontWeight = FontWeight.Bold
     )
     Row(
         modifier = Modifier
@@ -132,7 +136,8 @@ fun GenreCard(name: String){
 fun MostPlayedArtist(){
     Text(
         text = "Most Played Artists",
-        fontSize = 20.sp
+        fontSize = 20.sp,
+        fontWeight = FontWeight.Bold
     )
     Row(
         modifier = Modifier
