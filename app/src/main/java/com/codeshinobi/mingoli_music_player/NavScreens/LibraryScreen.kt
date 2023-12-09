@@ -8,6 +8,7 @@ import android.os.Build
 import android.provider.MediaStore
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -19,6 +20,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
@@ -104,7 +106,8 @@ fun MusicCard(music: MusicCardModel) {
     Row(
         modifier = Modifier
             .padding(16.dp)
-            .fillMaxWidth()
+            .fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically
     ) {
         Column(
             modifier = Modifier.weight(4f) // takes up 80% width
@@ -119,10 +122,14 @@ fun MusicCard(music: MusicCardModel) {
                 modifier = Modifier.padding(top = 8.dp)
             )
         }
-        Text(
-            text = music.duration,
-            fontSize = 14.sp,
-            modifier = Modifier.weight(1f) // takes up 20% width
-        )
+        Box(
+            modifier = Modifier.weight(1f), // takes up 20% width
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = music.duration,
+                fontSize = 14.sp
+            )
+        }
     }
 }
