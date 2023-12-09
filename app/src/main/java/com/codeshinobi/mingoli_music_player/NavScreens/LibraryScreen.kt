@@ -26,7 +26,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.codeshinobi.mingoli_music_player.Models.MusicCardModel
 import com.codeshinobi.mingoli_music_player.Models.convertMili
-import com.codeshinobi.mingoli_music_player.Models.getAlbumArt
+//import com.codeshinobi.mingoli_music_player.Models.getAlbumArt
 import com.codeshinobi.mingoli_music_player.ui.theme.Mingoli_music_playerTheme
 
 @Composable
@@ -81,9 +81,8 @@ fun Context.musicList(): MutableList<MusicCardModel> {
                 MediaStore.Audio.Media.EXTERNAL_CONTENT_URI,
                 id
             )
-            val bitmap = getAlbumArt(this, contentUri)
             val durationString = convertMili(duration)
-            list.add(MusicCardModel(contentUri, id, bitmap, title, artist, durationString))
+            list.add(MusicCardModel(contentUri, id,  title, artist, durationString))
         }
     }
     return list
@@ -105,15 +104,6 @@ fun MusicCard(music: MusicCardModel) {
             .padding(16.dp)
             .fillMaxWidth()
     ) {
-        val image = music.cover.asImageBitmap()
-        Image(
-            bitmap = image,
-            contentDescription = null,
-            modifier = Modifier
-                .height(180.dp)
-                .fillMaxWidth(),
-            contentScale = ContentScale.Crop
-        )
         Text(text = music.songTitle, fontSize = 20.sp, modifier = Modifier.padding(top = 16.dp))
         Text(text = music.artist, fontSize = 16.sp, modifier = Modifier.padding(top = 8.dp))
         Text(text = music.duration, fontSize = 14.sp, modifier = Modifier.padding(top = 4.dp))
