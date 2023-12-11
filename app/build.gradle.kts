@@ -64,9 +64,14 @@ dependencies {
     implementation ("androidx.navigation:navigation-compose:2.7.5")
     implementation(platform("androidx.compose:compose-bom:2023.08.00"))
 
-    //dependencies for Exoplayer
-    implementation ("com.google.android.exoplayer:exoplayer-core:2.19.1")
-    implementation ("com.google.android.exoplayer:exoplayer-media:2.16.1")
+//    //dependencies for Exoplayer
+//    implementation ("com.google.android.exoplayer:exoplayer-core:2.19.1")
+//    implementation ("com.google.android.exoplayer:exoplayer-media:2.16.1")
+//
+//    implementation ("androidx.media3:media3-exoplayer:1.2.0")
+//    implementation ("androidx.media3:media3-ui:1.2.0")
+//    implementation ("androidx.media3:media3-common:1.2.0")
+//    implementation ("androidx.media3:media3-session:1.2.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
